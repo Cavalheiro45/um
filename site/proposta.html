@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta | Site da Trogue's Cafeteria</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+:root{
+  --espresso:#1c0f0a; --roast:#2e1a10; --brown:#5e3018; --copper:#b5733a;
+  --caramel:#d9ad7c; --cream:#f6e3c6; --paper:#fbf6ee; --ink:#2a1a12; --muted:#6f5a4c; --line:#e8dccb;
+  --radius:20px; --shadow:0 12px 34px rgba(28,15,10,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,4vw,2.5rem)}
+p{margin:0 0 1em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin-bottom:.8em}
+.script{font-family:Yellowtail,cursive;font-weight:400}
+.lead{font-size:1.1rem;color:var(--muted);max-width:62ch}
+.btn{display:inline-flex;align-items:center;gap:.5em;min-height:50px;padding:0 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;font-size:1rem}
+.btn-cream{background:var(--caramel);color:var(--espresso)}
+.btn-ghost{border-color:rgba(246,227,198,.45);color:var(--cream)}
+.btn-dark{background:var(--espresso);color:var(--cream)}
+
+/* capa */
+.cover{min-height:100vh;min-height:100svh;display:grid;align-items:center;color:var(--cream);position:relative;overflow:hidden;
+  background:linear-gradient(90deg,rgba(28,15,10,.96) 0%,rgba(28,15,10,.86) 45%,rgba(28,15,10,.35) 100%),url(img/salao-balcao.jpg) center/cover}
+.cover .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding-top:40px;padding-bottom:40px}
+.cover img.logo{width:190px;margin-bottom:28px;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5))}
+.cover h1{font-size:clamp(2.4rem,6vw,4.2rem);color:#fff7ea}
+.cover h1 .script{color:var(--caramel);font-size:1.15em;display:block;line-height:1}
+.cover .lead{color:rgba(246,227,198,.85)}
+.meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin:26px 0 30px;font-size:.92rem;color:rgba(246,227,198,.75)}
+.meta b{color:var(--cream);display:block;font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.cover-photo{justify-self:end;width:100%;max-width:340px;aspect-ratio:3/4;border-radius:180px 180px var(--radius) var(--radius);object-fit:cover;box-shadow:0 30px 70px rgba(0,0,0,.5);border:6px solid rgba(246,227,198,.12)}
+@media (max-width:860px){.cover .wrap{grid-template-columns:1fr}.cover-photo{display:none}.cover{background:linear-gradient(180deg,rgba(28,15,10,.82),rgba(28,15,10,.96)),url(img/salao-balcao.jpg) center/cover}}
+
+/* carta */
+.letter{background:var(--cream)}
+.letter .wrap{max-width:780px;text-align:center}
+.letter p.big{font-family:Fraunces,serif;font-size:clamp(1.25rem,2.6vw,1.6rem);line-height:1.45;color:var(--brown)}
+.letter .sign{font-family:Yellowtail,cursive;font-size:2rem;color:var(--brown);margin-top:10px}
+
+/* conquistas */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.stat{background:#fff;border-radius:var(--radius);padding:26px 22px;box-shadow:var(--shadow)}
+.stat b{display:block;font-family:Fraunces,serif;font-size:2.4rem;color:var(--brown);line-height:1.05}
+.stat span{color:var(--muted);font-size:.92rem}
+@media (max-width:860px){.stats{grid-template-columns:1fr 1fr}}
+
+/* entregas */
+.deliver{background:#fff}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+.card{background:var(--paper);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.card img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.card .ico{height:120px;display:grid;place-items:center;background:linear-gradient(135deg,var(--roast),var(--espresso));color:var(--caramel)}
+.card .ico svg{width:46px;height:46px}
+.card div.b{padding:20px 22px 24px}
+.card h3{font-size:1.15rem}
+.card p{color:var(--muted);font-size:.94rem;margin:0}
+.card .gain{margin-top:12px;font-size:.88rem;font-weight:600;color:var(--brown)}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
+
+/* como funciona */
+.flow{background:linear-gradient(180deg,var(--roast),var(--espresso));color:var(--cream)}
+.flow h2{color:#fff7ea}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px;counter-reset:s}
+.st{background:rgba(246,227,198,.07);border:1px solid rgba(246,227,198,.15);border-radius:var(--radius);padding:24px}
+.st::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--caramel);color:var(--espresso);font:700 1.1rem Fraunces,serif;margin-bottom:14px}
+.st h3{color:#fff7ea;font-size:1.15rem}
+.st p{color:rgba(246,227,198,.78);margin:0;font-size:.95rem}
+.msg{margin-top:28px;background:#0f1f17;border-radius:18px;padding:18px 20px;max-width:520px;font:500 .9rem/1.55 ui-monospace,Consolas,monospace;color:#d7f5e1;white-space:pre-line;border:1px solid rgba(37,211,102,.35)}
+.msg-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+@media (max-width:860px){.steps,.msg-wrap{grid-template-columns:1fr}}
+
+/* ganhos */
+.gains{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}
+.g{display:flex;gap:14px;background:#fff;border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
+.g svg{width:26px;height:26px;color:var(--copper);flex:none;margin-top:2px}
+.g b{display:block}
+.g span{color:var(--muted);font-size:.94rem}
+@media (max-width:760px){.gains{grid-template-columns:1fr}}
+
+/* investimento */
+.invest{background:var(--cream)}
+.plans{display:grid;grid-template-columns:1fr 1.1fr;gap:22px;margin-top:34px;align-items:stretch}
+.plan{background:#fff;border-radius:24px;padding:30px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.plan.best{background:var(--espresso);color:var(--cream);position:relative}
+.plan.best h3{color:#fff7ea}
+.ribbon{position:absolute;top:-14px;right:24px;background:var(--caramel);color:var(--espresso);font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+.price{font-family:Fraunces,serif;font-size:2.8rem;line-height:1;margin:8px 0 4px;color:var(--brown)}
+.plan.best .price{color:var(--caramel)}
+.old{text-decoration:line-through;opacity:.6;font-size:.95rem}
+.plan ul{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px;font-size:.95rem}
+.plan li{display:flex;gap:10px}
+.plan li::before{content:"✓";color:var(--copper);font-weight:700}
+.plan.best li::before{color:var(--caramel)}
+.inst{font-size:.9rem;opacity:.8}
+.extras{margin-top:22px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.extra{background:rgba(255,255,255,.65);border-radius:16px;padding:16px 18px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.extra b{font-family:Fraunces,serif;color:var(--brown);white-space:nowrap}
+.extra span{font-size:.92rem}
+.extra small{display:block;color:var(--muted)}
+.cond{margin-top:18px;font-size:.92rem;color:var(--muted)}
+@media (max-width:860px){.plans,.extras{grid-template-columns:1fr}}
+
+/* próximos passos */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:36px;position:relative}
+.timeline::before{content:"";position:absolute;left:12%;right:12%;top:20px;height:2px;background:var(--line)}
+.tl{text-align:center;padding:0 10px;position:relative}
+.tl i{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 14px;border-radius:50%;background:var(--brown);color:var(--cream);font:700 1rem Fraunces,serif;font-style:normal;position:relative}
+.tl b{display:block}
+.tl span{color:var(--muted);font-size:.9rem}
+@media (max-width:760px){.timeline{grid-template-columns:1fr;gap:22px;text-align:left}.timeline::before{display:none}.tl{display:grid;grid-template-columns:42px 1fr;gap:14px;text-align:left}.tl i{margin:0}}
+
+.final{background:var(--espresso);color:var(--cream);text-align:center;padding:76px 0}
+.final h2{color:#fff7ea}
+.final .cta{justify-content:center;margin-top:22px}
+.final img{width:120px;margin:0 auto 20px}
+footer{background:#120905;color:rgba(246,227,198,.6);text-align:center;font-size:.84rem;padding:22px}
+
+@media print{
+  section,.cover{break-inside:avoid;page-break-inside:avoid}
+  .cover{min-height:auto;padding:40px 0}
+  .cta{display:none}
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+</svg>
+
+<!-- CAPA -->
+<header class="cover">
+  <div class="wrap">
+    <div>
+      <img class="logo" src="img/logo.png" alt="Trogue's Cafeteria">
+      <h1><span class="script">Um site com</span> o sabor da Trogue's</h1>
+      <p class="lead">Preparamos uma proposta pensada para a casa de vocês: um site que mostra o carinho de cada receita e transforma quem chega pelo Google e pelo Instagram em pedido pronto no WhatsApp.</p>
+      <div class="meta">
+        <div><b>Para</b>Renato Trogue Jr. e Pamela Trogue</div>
+        <div><b>Preparado por</b>Samuel Cavalheiro · Desenvolvimento web<br><a href="https://wa.me/5541985175819" style="color:inherit">(41) 98517-5819</a></div>
+        <div><b>Data</b>Novembro de 2026</div>
+      </div>
+      <div class="cta">
+        <a class="btn btn-cream" href="index.html" target="_blank" rel="noopener">Ver o site da Trogue's</a>
+        <a class="btn btn-ghost" href="#investimento">Ver investimento</a>
+      </div>
+    </div>
+    <img class="cover-photo" src="img/baguete-milkshake.jpg" alt="Baguete Trogue's e café com leite com borda de Nutella">
+  </div>
+</header>
+
+<!-- CARTA -->
+<section class="letter">
+  <div class="wrap">
+    <span class="eyebrow">Antes de tudo</span>
+    <p class="big">A Trogue's já tem o mais difícil: clientes que voltam, comida feita com cuidado e uma reputação construída em mais de uma década no Centro de Matinhos. Nosso trabalho é dar a essa história um endereço próprio na internet, à altura do que vocês servem no balcão.</p>
+    <div class="sign">Feito com carinho para a Trogue's</div>
+    <p style="margin-top:6px;color:var(--muted)">Samuel Cavalheiro · Desenvolvimento web</p>
+  </div>
+</section>
+
+<!-- CONQUISTAS -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">O que vocês já conquistaram</span>
+    <h2>Uma reputação que merece ser encontrada</h2>
+    <p class="lead">Esses números são de vocês. O site existe para que mais gente os veja na hora de escolher onde tomar café.</p>
+    <div class="stats">
+      <div class="stat"><b>4,6</b><span>de nota média no Google</span></div>
+      <div class="stat"><b>794</b><span>avaliações de clientes</span></div>
+      <div class="stat"><b>10 mil+</b><span>seguidores no Instagram</span></div>
+      <div class="stat"><b>12 anos</b><span>de história na Rua da Fonte</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTREGAS -->
+<section class="deliver">
+  <div class="wrap">
+    <span class="eyebrow">O que preparamos</span>
+    <h2>Tudo o que a Trogue's precisa, em um só lugar</h2>
+    <p class="lead">A prévia já está pronta e funcionando. Vocês podem abrir no celular agora mesmo.</p>
+    <div class="cards">
+      <article class="card">
+        <img src="img/hamburguer.jpg" alt="" loading="lazy">
+        <div class="b"><h3>Pedido pronto no WhatsApp</h3><p>O cliente escolhe os itens, agenda o dia e o horário da retirada e informa o pagamento. A mensagem chega completa.</p><div class="gain">Menos troca de mensagens, menos erro.</div></div>
+      </article>
+      <article class="card">
+        <img src="img/paes-caseiros.jpg" alt="" loading="lazy">
+        <div class="b"><h3>Cardápio digital</h3><p>Cafés, lanches, doces, pães e bebidas com os itens que vocês já mostram no Instagram.</p><div class="gain">Tudo o que a casa oferece, fácil de achar.</div></div>
+      </article>
+      <article class="card">
+        <img src="img/salao-balcao.jpg" alt="" loading="lazy" style="object-position:center 30%">
+        <div class="b"><h3>A cara da Trogue's</h3><p>Logo, cores, letra cursiva e fotos reais da casa. O cliente reconhece a marca na hora.</p><div class="gain">Coerente com o Instagram e o balcão.</div></div>
+      </article>
+      <article class="card">
+        <div class="ico"><svg><use href="#i-search"/></svg></div>
+        <div class="b"><h3>Encontrados no Google</h3><p>Preparado para buscas como "cafeteria em Matinhos", com endereço, horário e nota no formato que o Google entende.</p><div class="gain">Mais visibilidade, inclusive na temporada.</div></div>
+      </article>
+      <article class="card">
+        <div class="ico"><svg><use href="#i-phone"/></svg></div>
+        <div class="b"><h3>Feito para o celular</h3><p>"Aberto agora", mapa com rota, Trogue's Clube, avaliações e dúvidas frequentes, tudo a um toque.</p><div class="gain">O cliente resolve tudo sem perguntar.</div></div>
+      </article>
+      <article class="card">
+        <div class="ico"><svg><use href="#i-shield"/></svg></div>
+        <div class="b"><h3>Seguro e dentro da LGPD</h3><p>HTTPS, aviso de cookies, dados do pedido que não ficam guardados no site e dados da empresa no rodapé.</p><div class="gain">Tranquilidade e credibilidade.</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="flow">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--caramel)">Como o pedido funciona</span>
+    <h2>Do cardápio ao WhatsApp em 1 minuto</h2>
+    <div class="msg-wrap">
+      <div class="steps" style="grid-template-columns:1fr;margin-top:24px">
+        <div class="st"><h3>Escolhe no cardápio</h3><p>Toca em "Adicionar" e ajusta as quantidades. O subtotal aparece na hora.</p></div>
+        <div class="st"><h3>Preenche o essencial</h3><p>Nome, dia e horário da retirada e como vai pagar. Nada além disso.</p></div>
+        <div class="st"><h3>Envia pronto</h3><p>O WhatsApp abre com o pedido escrito. A equipe só confirma.</p></div>
+      </div>
+      <div class="msg" aria-label="Exemplo de mensagem recebida">Olá, Trogue's! Quero fazer este pedido pelo site:
+
+*PEDIDO*
+• 2x Cappuccino — R$ 22,00
+• 1x Baguete de pernil — R$ 28,00
+*Subtotal:* R$ 50,00
+
+*Nome:* Maria
+*Retirada no balcão* (Rua da Fonte, 604)
+*Horário da retirada:* Amanhã, 19/11, às 08:15
+*Pagamento:* Pix</div>
+    </div>
+  </div>
+</section>
+
+<!-- GANHOS -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">O que a Trogue's ganha</span>
+    <h2>Mais tempo para o que importa: o balcão</h2>
+    <div class="gains">
+      <div class="g"><svg><use href="#i-check"/></svg><div><b>Pedido completo de primeira</b><span>Itens, horário da retirada e pagamento chegam juntos. A equipe já sabe a que horas o cliente vai passar.</span></div></div>
+      <div class="g"><svg><use href="#i-check"/></svg><div><b>Agilidade no pico</b><span>O movimento cresce por volta das 10h e das 18h. Pedido organizado faz diferença.</span></div></div>
+      <div class="g"><svg><use href="#i-check"/></svg><div><b>Um canal que é de vocês</b><span>Sem depender do alcance do Instagram nem pagar comissão por pedido.</span></div></div>
+      <div class="g"><svg><use href="#i-check"/></svg><div><b>Menos perguntas repetidas</b><span>Horário, endereço, pet, sem lactose e pagamento já respondidos no site.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTIMENTO -->
+<section class="invest" id="investimento">
+  <div class="wrap">
+    <span class="eyebrow">Investimento</span>
+    <h2>Um valor justo para começar bem</h2>
+    <p class="lead">Escolham o formato que faz mais sentido agora. Tudo pode crescer depois.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Site Trogue's</h3>
+        <div class="price">R$ 1.800,00</div>
+        <div class="inst">ou 3x de R$ 600,00 sem juros</div>
+        <ul>
+          <li>Site completo com cardápio e pedido pelo WhatsApp</li>
+          <li>Logo e fotos atuais aplicadas e otimizadas</li>
+          <li>1º ano de domínio e hospedagem à parte (R$ 500,00)</li>
+          <li>Preparado para o Google e para celular</li>
+          <li>Treinamento de 1 hora e guia de uso</li>
+        </ul>
+      </div>
+      <div class="plan best">
+        <span class="ribbon">Recomendado</span>
+        <h3>Pacote Completo</h3>
+        <div class="price">R$ 2.300,00</div>
+        <div class="inst">ou 3x de R$ 766,67 sem juros · <span class="old">R$ 2.950,00 separados</span></div>
+        <ul>
+          <li>Tudo do Site Trogue's</li>
+          <li><span>Logo redesenhada em vetor, para tela e impressão <b>por nossa conta</b></span></li>
+          <li>1º ano de domínio troguescafeteria.com.br e hospedagem </li>
+          <li>30 dias de ajustes depois da publicação</li>
+        </ul>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="extra"><span>Domínio e hospedagem<small>HTTPS, backup e monitoramento · a partir do 2º ano no pacote</small></span><b>R$ 500,00/ano</b></div>
+      <div class="extra"><span>Manutenção mensal (opcional)<small>Até 4 atualizações por mês e suporte pelo WhatsApp</small></span><b>R$ 180,00/mês</b></div>
+      <div class="extra"><span>Logo em vetor (avulsa)<small>Para quem escolher só o Site Trogue's</small></span><b>R$ 350,00</b></div>
+      <div class="extra"><span>Fotos profissionais<small>Usamos as fotos de vocês; se quiserem um fotógrafo, aplicamos as novas fotos sem custo extra</small></span><b>Incluso</b></div>
+    </div>
+    <p class="cond">Pagamento: 50% na aprovação e 50% na publicação, ou 3x sem juros. Prazo: 15 dias úteis depois de recebermos cardápio com preços, fotos do almoço e confirmação do WhatsApp de pedidos.</p>
+  </div>
+</section>
+
+<!-- PRÓXIMOS PASSOS -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Próximos passos</span>
+    <h2>Simples assim</h2>
+    <div class="timeline">
+      <div class="tl"><i>1</i><div><b>Aprovação</b><span>Escolhemos juntos o formato</span></div></div>
+      <div class="tl"><i>2</i><div><b>Materiais</b><span>Vocês enviam cardápio, preços e fotos</span></div></div>
+      <div class="tl"><i>3</i><div><b>Ajustes</b><span>Revisamos tudo com vocês</span></div></div>
+      <div class="tl"><i>4</i><div><b>No ar</b><span>Publicação e treinamento da equipe</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <img src="img/logo.png" alt="">
+    <h2>Vamos colocar a Trogue's no mapa?</h2>
+    <p class="lead" style="margin:0 auto;color:rgba(246,227,198,.8)">A prévia já está pronta. Falta só o toque final de vocês.</p>
+    <div class="cta">
+      <a class="btn btn-cream" href="https://wa.me/5541985175819?text=Ol%C3%A1!%20Vi%20a%20proposta%20do%20site%20da%20Trogue's%20e%20quero%20conversar." target="_blank" rel="noopener">Falar comigo no WhatsApp</a>
+      <a class="btn btn-ghost" href="index.html" target="_blank" rel="noopener">Abrir o site da Trogue's</a>
+    </div>
+  </div>
+</section>
+
+<footer>Proposta preparada exclusivamente para a Trogue's Cafeteria · Novembro de 2026 · Valores válidos por 15 dias · Samuel Cavalheiro · (41) 98517-5819</footer>
+</body>
+</html>

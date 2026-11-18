@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 820 660" width="820" height="660">
+  <title>Trogue's Cafeteria — logo (recriação em vetor)</title>
+  <!--
+    Recriação vetorial da logo da Trogue's Cafeteria.
+    Fontes: Yellowtail (letreiro) e Montserrat 600 (CAFETERIA), ambas Google Fonts, licença OFL.
+    Para entrega final/impressão: abrir no Inkscape, selecionar tudo e usar Caminho > Objeto para caminho,
+    assim o arquivo não depende das fontes instaladas.
+  -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Yellowtail&amp;family=Montserrat:wght@600&amp;display=swap');
+      .script{font-family:Yellowtail,cursive;font-size:250px}
+      .caps{font-family:Montserrat,Arial,sans-serif;font-weight:600;font-size:40px;letter-spacing:9px}
+    </style>
+    <path id="arc" d="M 222 430 A 200 200 0 0 0 598 430"/>
+  </defs>
+
+  <!-- contorno "adesivo" cinza -->
+  <circle cx="410" cy="345" r="292" fill="#d6d6d6"/>
+  <g transform="rotate(-6 410 395)">
+    <text class="script" x="410" y="430" text-anchor="middle" fill="#d6d6d6" stroke="#d6d6d6" stroke-width="58" stroke-linejoin="round">Trogue's</text>
+  </g>
+
+  <!-- selo preto -->
+  <circle cx="410" cy="345" r="276" fill="#0b0605"/>
+  <circle cx="410" cy="345" r="254" fill="none" stroke="#e6e6e6" stroke-width="5"/>
+  <circle cx="410" cy="345" r="238" fill="none" stroke="#d9ad7c" stroke-width="3"/>
+
+  <!-- xícara com vapor -->
+  <g transform="translate(410 150)">
+    <path d="M-62 30 h124 c0 52 -28 84 -62 84 s-62 -32 -62 -84 z" fill="#e6e6e6"/>
+    <ellipse cx="0" cy="30" rx="62" ry="13" fill="#e6e6e6"/>
+    <ellipse cx="0" cy="31" rx="50" ry="8" fill="#c9a27a"/>
+    <path d="M58 48 c34 -8 44 26 14 44 l-12 6" fill="none" stroke="#e6e6e6" stroke-width="11" stroke-linecap="round"/>
+    <path d="M-18 14 c-18 -22 10 -34 -4 -54 c-10 -14 -30 -10 -28 6 c2 12 18 12 18 2" fill="none" stroke="#e6e6e6" stroke-width="9" stroke-linecap="round"/>
+    <path d="M12 16 c20 -24 -14 -34 6 -58 c12 -14 34 -6 30 10 c-3 12 -20 12 -18 0" fill="none" stroke="#d9ad7c" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- letreiro -->
+  <g transform="rotate(-6 410 395)">
+    <text class="script" x="410" y="430" text-anchor="middle" fill="#0b0605" stroke="#0b0605" stroke-width="26" stroke-linejoin="round">Trogue's</text>
+    <text class="script" x="410" y="430" text-anchor="middle" fill="#d9ad7c">Trogue's</text>
+  </g>
+
+  <!-- CAFETERIA em arco -->
+  <text class="caps" fill="#e6e6e6"><textPath href="#arc" xlink:href="#arc" startOffset="50%" text-anchor="middle">CAFETERIA</textPath></text>
+  <circle cx="246" cy="470" r="6" fill="#e6e6e6"/>
+  <circle cx="574" cy="470" r="6" fill="#e6e6e6"/>
+</svg>
